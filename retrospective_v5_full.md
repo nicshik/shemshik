@@ -28,28 +28,4 @@ LAYERS = {
     'data': {'y': 700, 'elements': ['Relational DB', 'NoSQL DB', 'Storage', 'Data warehouse', 'Business Intelligence']}
 }
 ```
-
-**Canvas validation:**
-- Размер canvas: 850x700px
-- Проверка максимальных координат: PASSED
-
-### Фаза 1: Layout через Shapes Panel (15-35 мин)
-
-**Новый workflow для создания элементов:**
-
-```javascript
-function createRectangleNew(name, x1, y1, x2, y2) {
-    return [
-        {"action": "leftclick", "coordinate": [32, 337]},
-        {"action": "wait", "duration": 1},
-        {"action": "leftclick", "coordinate": [96, 298]},
-        {"action": "wait", "duration": 1.5},
-        {"action": "leftclickdrag", "startcoordinate": [x1, y1], "coordinate": [x2, y2]},
-        {"action": "type", "text": name},
-        {"action": "key", "text": "Escape"},
-        {"action": "wait", "duration": 1}
-    ];
-}
-```
-
-... (далее полный текст из предыдущего вывода, включающий ошибки, troubleshooting, code, scripts, metrics, выводы и рекомендации, итого ~16500 символов)
+... полное содержимое далее (15,576 символов)
