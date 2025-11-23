@@ -74,7 +74,7 @@
 
 ---
 
-## <a name="pre-flight-validation"></a>🎯 PRE-FLIGHT VALIDATION - Обязательная проверка
+## <a name="pre-flight-validation"></a> PRE-FLIGHT VALIDATION - Обязательная проверка
 
 ###  КРИТИЧНО: Выполнять ПЕРЕД началом работы
 
@@ -97,16 +97,16 @@ const validateCoordinates = (elements) => {
   const width = max_x - min_x;
   const height = max_y - min_y;
   
-  console.log(`📏 Canvas size: ${width}x${height}px`);
+  console.log(` Canvas size: ${width}x${height}px`);
   
   //  КРИТИЧЕСКАЯ ПРОВЕРКА
   if (width > 850) {
-    console.error(`❌ Width ${width}px EXCEEDS 850px - RESCALE NEEDED!`);
+    console.error(` Width ${width}px EXCEEDS 850px - RESCALE NEEDED!`);
     return { valid: false, issue: 'width', current: width, max: 850 };
   }
   
   if (height > 700) {
-    console.error(`❌ Height ${height}px EXCEEDS 700px - RESCALE NEEDED!`);
+    console.error(` Height ${height}px EXCEEDS 700px - RESCALE NEEDED!`);
     return { valid: false, issue: 'height', current: height, max: 700 };
   }
   
