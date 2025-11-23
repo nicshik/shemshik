@@ -6,9 +6,9 @@
 
 ---
 
-## 📌 Что нового в версии 5.0
+## Что нового в версии 5.0
 
-### 🚀 КРИТИЧЕСКИЕ УЛУЧШЕНИЯ v4.0 → v5.0:
+### КРИТИЧЕСКИЕ УЛУЧШЕНИЯ v4.0 → v5.0:
 
 | Показатель | v4.0 | v5.0 | Улучшение |
 |------------|------|------|------------|
@@ -17,20 +17,20 @@
 | **Рестарты из-за координат** | 100% случаев | 0% | **Полное устранение** |
 | **Connection creation** | 40+ минут | 14 минут | **2.5x быстрее** |
 
-### ✨ Ключевые нововведения v5.0:
+### Ключевые нововведения v5.0:
 
-1. ⭐ **ОБЯЗАТЕЛЬНАЯ PRE-FLIGHT VALIDATION** — проверка координат до начала работы
-2. ⭐ **CANVAS SIZE LIMITS** — жёсткие ограничения 850x700px
-3. ⭐ **ELEMENT_REGISTRY PATTERN** — обязательный tracking всех координат
-4. ⭐ **HOTKEY "O" НЕ РАБОТАЕТ** — документированное ограничение + workarounds
-5. ⭐ **VIEWPORT BATCHING** — основной метод для connections (2.5x faster)
-6. ⭐ **PYTHON COORDINATE GENERATOR** — автоматическая генерация координат
-7. ⭐ **DECISION TREES** — troubleshooting для типовых проблем
-8. ⭐ **READY-TO-USE TEMPLATES** — готовые шаблоны кода
+1.  **ОБЯЗАТЕЛЬНАЯ PRE-FLIGHT VALIDATION** — проверка координат до начала работы
+2.  **CANVAS SIZE LIMITS** — жёсткие ограничения 850x700px
+3.  **ELEMENT_REGISTRY PATTERN** — обязательный tracking всех координат
+4.  **HOTKEY "O" НЕ РАБОТАЕТ** — документированное ограничение + workarounds
+5.  **VIEWPORT BATCHING** — основной метод для connections (2.5x faster)
+6.  **PYTHON COORDINATE GENERATOR** — автоматическая генерация координат
+7.  **DECISION TREES** — troubleshooting для типовых проблем
+8.  **READY-TO-USE TEMPLATES** — готовые шаблоны кода
 
 ---
 
-## ⚠️ КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ
+##  КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ
 
 **Эти инструкции основаны на реальном опыте работы с Miro web interface (ноябрь 2025).**
 
@@ -38,45 +38,45 @@
 
 ### ОБЯЗАТЕЛЬНО перед началом работы:
 
-1. ✅ **Выполните PRE-FLIGHT VALIDATION** (см. раздел ниже)
-2. ✅ **Создайте ОДИН тестовый элемент** перед массовым созданием
-3. ✅ **Используйте ELEMENT_REGISTRY** для tracking координат
-4. ✅ **Проверьте Canvas Size** — максимум 850x700px
-5. ✅ **НЕ используйте горячую клавишу "O"** (oval) — она не работает
+1.  **Выполните PRE-FLIGHT VALIDATION** (см. раздел ниже)
+2.  **Создайте ОДИН тестовый элемент** перед массовым созданием
+3.  **Используйте ELEMENT_REGISTRY** для tracking координат
+4.  **Проверьте Canvas Size** — максимум 850x700px
+5.  **НЕ используйте горячую клавишу "O"** (oval) — она не работает
 
 ---
 
-## 📋 Содержание
+##  Содержание
 
-### 🔴 КРИТИЧЕСКИЕ СЕКЦИИ (ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ):
+###  КРИТИЧЕСКИЕ СЕКЦИИ (ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ):
 
-1. [🎯 PRE-FLIGHT VALIDATION - Обязательная проверка](#pre-flight-validation)
-2. [📏 CANVAS SIZE LIMITS - Жёсткие ограничения](#canvas-limits)
-3. [📝 ELEMENT_REGISTRY PATTERN - Обязательный tracking](#element-registry)
-4. [⚠️ HOTKEY LIMITATIONS - Что НЕ работает](#hotkey-limitations)
-5. [🚀 LARGE DIAGRAMS WORKFLOW - Для 20+ элементов](#large-diagrams)
+1. [ PRE-FLIGHT VALIDATION - Обязательная проверка](#pre-flight-validation)
+2. [ CANVAS SIZE LIMITS - Жёсткие ограничения](#canvas-limits)
+3. [ ELEMENT_REGISTRY PATTERN - Обязательный tracking](#element-registry)
+4. [ HOTKEY LIMITATIONS - Что НЕ работает](#hotkey-limitations)
+5. [ LARGE DIAGRAMS WORKFLOW - Для 20+ элементов](#large-diagrams)
 
-### 🟡 ВАЖНЫЕ СЕКЦИИ:
+###  ВАЖНЫЕ СЕКЦИИ:
 
-6. [🔗 VIEWPORT BATCHING - Connections 2.5x faster](#viewport-batching)
-7. [🐍 PYTHON COORDINATE GENERATOR - Автоматизация](#python-generator)
-8. [🔧 TROUBLESHOOTING DECISION TREES](#troubleshooting-trees)
-9. [📦 READY-TO-USE TEMPLATES - Копируй и используй](#templates)
-10. [📊 PERFORMANCE BENCHMARKS - Реальные метрики](#benchmarks)
+6. [ VIEWPORT BATCHING - Connections 2.5x faster](#viewport-batching)
+7. [ PYTHON COORDINATE GENERATOR - Автоматизация](#python-generator)
+8. [ TROUBLESHOOTING DECISION TREES](#troubleshooting-trees)
+9. [ READY-TO-USE TEMPLATES - Копируй и используй](#templates)
+10. [ PERFORMANCE BENCHMARKS - Реальные метрики](#benchmarks)
 
-### 🟢 БАЗОВЫЕ СЕКЦИИ:
+###  БАЗОВЫЕ СЕКЦИИ:
 
-11. [🎯 Назначение](#назначение)
-12. [📐 Координатная система Miro](#coordinates)
-13. [🛠️ Проверенные workflows](#workflows)
-14. [🎨 Системы дизайна](#design)
-15. [⚡ Горячие клавиши](#hotkeys)
+11. [ Назначение](#назначение)
+12. [ Координатная система Miro](#coordinates)
+13. [ Проверенные workflows](#workflows)
+14. [ Системы дизайна](#design)
+15. [ Горячие клавиши](#hotkeys)
 
 ---
 
 ## <a name="pre-flight-validation"></a>🎯 PRE-FLIGHT VALIDATION - Обязательная проверка
 
-### ⚠️ КРИТИЧНО: Выполнять ПЕРЕД началом работы
+###  КРИТИЧНО: Выполнять ПЕРЕД началом работы
 
 **Цель:** Предотвратить потерю 15-30 минут на restart из-за неправильных координат.
 
@@ -99,7 +99,7 @@ const validateCoordinates = (elements) => {
   
   console.log(`📏 Canvas size: ${width}x${height}px`);
   
-  // 🔴 КРИТИЧЕСКАЯ ПРОВЕРКА
+  //  КРИТИЧЕСКАЯ ПРОВЕРКА
   if (width > 850) {
     console.error(`❌ Width ${width}px EXCEEDS 850px - RESCALE NEEDED!`);
     return { valid: false, issue: 'width', current: width, max: 850 };
@@ -110,7 +110,7 @@ const validateCoordinates = (elements) => {
     return { valid: false, issue: 'height', current: height, max: 700 };
   }
   
-  console.log(`✅ Validation PASSED - Safe to proceed`);
+  console.log(` Validation PASSED - Safe to proceed`);
   return { valid: true };
 };
 
@@ -139,7 +139,7 @@ if (!validation.valid) {
  * Создать ОДИН элемент для проверки workflow
  */
 const testWorkflow = () => {
-  console.log("🧪 Testing workflow...");
+  console.log(" Testing workflow...");
   
   return [
     { action: "left_click", coordinate: [500, 500] },  // Empty space
@@ -186,21 +186,21 @@ const determineWorkflow = (element_count, connection_count) => {
 };
 ```
 
-### ✅ Pre-Flight Checklist
+### Pre-Flight Checklist
 
 Перед началом работы убедитесь:
 
-- [ ] ✅ Координаты валидированы (max 850x700px)
-- [ ] ✅ Workflow определён (SIMPLE/MEDIUM/LARGE)
-- [ ] ✅ Тестовый элемент создан успешно
-- [ ] ✅ ELEMENT_REGISTRY подготовлен (для MEDIUM/LARGE)
-- [ ] ✅ Coordinate grid plan составлен (для LARGE)
+- [ ]  Координаты валидированы (max 850x700px)
+- [ ]  Workflow определён (SIMPLE/MEDIUM/LARGE)
+- [ ]  Тестовый элемент создан успешно
+- [ ]  ELEMENT_REGISTRY подготовлен (для MEDIUM/LARGE)
+- [ ]  Coordinate grid plan составлен (для LARGE)
 
 ---
 
 ## <a name="canvas-limits"></a>📏 CANVAS SIZE LIMITS - Жёсткие ограничения
 
-### 🔴 КРИТИЧЕСКОЕ ПРАВИЛО
+###  КРИТИЧЕСКОЕ ПРАВИЛО
 
 **MAX Canvas Size: 850x700px** (включая margins)
 
@@ -250,16 +250,16 @@ const MARGINS = {
 
 ## <a name="element-registry"></a>📝 ELEMENT_REGISTRY PATTERN - Обязательный tracking
 
-### 🔴 КРИТИЧЕСКОЕ ОТКРЫТИЕ
+###  КРИТИЧЕСКОЕ ОТКРЫТИЕ
 
 **read_page НЕ возвращает координаты canvas элементов!**
 
 ```javascript
-// ❌ ОЖИДАНИЕ (НЕ РАБОТАЕТ):
+//  ОЖИДАНИЕ (НЕ РАБОТАЕТ):
 const page_data = await read_page(tab_id);
 const elements = page_data.canvas.shapes;  // undefined!
 
-// ✅ РЕАЛЬНОСТЬ:
+//  РЕАЛЬНОСТЬ:
 // read_page возвращает только DOM структуру интерфейса
 // Canvas элементы недоступны через API
 ```
@@ -288,7 +288,7 @@ const createElement = (name, x1, y1, x2, y2) => {
     { action: "wait", duration: 1 }
   ];
   
-  // ✅ КРИТИЧНО: Сохранить координаты в REGISTRY
+  //  КРИТИЧНО: Сохранить координаты в REGISTRY
   ELEMENTS[name] = {
     x1, y1, x2, y2,
     center: [(x1 + x2) / 2, (y1 + y2) / 2],
@@ -297,7 +297,7 @@ const createElement = (name, x1, y1, x2, y2) => {
     created_at: Date.now()
   };
   
-  console.log(`✅ Created & tracked: ${name} at [${ELEMENTS[name].center}]`);
+  console.log(` Created & tracked: ${name} at [${ELEMENTS[name].center}]`);
   
   return actions;
 };
@@ -308,10 +308,10 @@ const createElement = (name, x1, y1, x2, y2) => {
 const createConnection = (from_name, to_name) => {
   // Validation
   if (!ELEMENTS[from_name]) {
-    throw new Error(`❌ Element "${from_name}" not found in registry`);
+    throw new Error(` Element "${from_name}" not found in registry`);
   }
   if (!ELEMENTS[to_name]) {
-    throw new Error(`❌ Element "${to_name}" not found in registry`);
+    throw new Error(` Element "${to_name}" not found in registry`);
   }
   
   const from = ELEMENTS[from_name].center;
@@ -331,29 +331,29 @@ const createConnection = (from_name, to_name) => {
 
 ---
 
-## <a name="hotkey-limitations"></a>⚠️ HOTKEY LIMITATIONS - Что НЕ работает
+## <a name="hotkey-limitations"></a> HOTKEY LIMITATIONS - Что НЕ работает
 
-### 🔴 КРИТИЧЕСКОЕ: Горячая клавиша "O" (oval) НЕ РАБОТАЕТ
+###  КРИТИЧЕСКОЕ: Горячая клавиша "O" (oval) НЕ РАБОТАЕТ
 
 **Reliability Matrix:**
 
 | Клавиша | Назначение | Success Rate | Рекомендация |
 |---------|-----------|--------------|------------|
-| **R** | Rectangle | **95%** ✅ | **PRIMARY - использовать для ВСЕХ элементов** |
-| **L** | Line | **95%** ✅ | **PRIMARY** |
-| **T** | Text | **90%** ✅ | Использовать свободно |
-| **O** | Oval | **0%** ❌ | **NEVER USE** |
-| **S** | Shapes | **50%** ⚠️ | Ненадёжно, использовать с осторожностью |
-| **Alt+1** | Fit to Screen | **85%** ✅ | Использовать после batches |
-| **Escape** | Cancel | **100%** ✅ | Всегда работает |
+| **R** | Rectangle | **95%**  | **PRIMARY - использовать для ВСЕХ элементов** |
+| **L** | Line | **95%**  | **PRIMARY** |
+| **T** | Text | **90%**  | Использовать свободно |
+| **O** | Oval | **0%**  | **NEVER USE** |
+| **S** | Shapes | **50%**  | Ненадёжно, использовать с осторожностью |
+| **Alt+1** | Fit to Screen | **85%**  | Использовать после batches |
+| **Escape** | Cancel | **100%**  | Всегда работает |
 
 ### Workarounds для Oval
 
 ```javascript
-// ❌ НЕ РАБОТАЕТ:
+//  НЕ РАБОТАЕТ:
 { action: "key", text: "O" }  // 0% success rate
 
-// ✅ OPTION 1: Shapes Panel (медленно, +20 сек)
+//  OPTION 1: Shapes Panel (медленно, +20 сек)
 const createOvalViaPanel = (x1, y1, x2, y2, label) => [
   { action: "left_click", coordinate: [50, 300] },  // Shapes button
   { action: "wait", duration: 1 },
@@ -364,7 +364,7 @@ const createOvalViaPanel = (x1, y1, x2, y2, label) => [
   { action: "key", text: "Escape" }
 ];
 
-// ✅ OPTION 2: Rectangle для всех (РЕКОМЕНДУЕТСЯ)
+//  OPTION 2: Rectangle для всех (РЕКОМЕНДУЕТСЯ)
 const createDatabaseAsRectangle = (x1, y1, x2, y2, label) => [
   { action: "key", text: "R" },  // 95% success rate
   { action: "left_click_drag", coordinate: [x2, y2], start_coordinate: [x1, y1] },
@@ -379,21 +379,21 @@ const createDatabaseAsRectangle = (x1, y1, x2, y2, label) => [
 ИСПОЛЬЗУЙ R (Rectangle) для ВСЕХ элементов, включая базы данных
 
 ПРИЧИНЫ:
-✅ 95% success rate vs 0% для O
-✅ 3-4 сек vs 20-30 сек через Shapes Panel
-✅ Скорость важнее визуальной точности
-✅ Для автоматизации форма не критична
+ 95% success rate vs 0% для O
+ 3-4 сек vs 20-30 сек через Shapes Panel
+ Скорость важнее визуальной точности
+ Для автоматизации форма не критична
 ```
 
 ---
 
-## <a name="large-diagrams"></a>🚀 LARGE DIAGRAMS WORKFLOW - Для 20+ элементов
+## <a name="large-diagrams"></a> LARGE DIAGRAMS WORKFLOW - Для 20+ элементов
 
 ### Когда использовать
 
-- ✅ Диаграмма содержит **20+ элементов**
-- ✅ Диаграмма содержит **30+ connections**
-- ✅ Оценка времени по Basic Workflow > 25 минут
+-  Диаграмма содержит **20+ элементов**
+-  Диаграмма содержит **30+ connections**
+-  Оценка времени по Basic Workflow > 25 минут
 
 ### Ожидаемые результаты (30 элементов, 45 connections)
 
@@ -403,7 +403,7 @@ const createDatabaseAsRectangle = (x1, y1, x2, y2, label) => [
 | **Elements** | 27 min (+15 restart) | 12 min | **-30 min** |
 | **Connections** | 40+ min (partial) | 14 min | **-26 min** |
 | **Verification** | 3 min | 3 min | - |
-| **TOTAL** | **90 min** | **34 min** | **🔥 2.6x faster** |
+| **TOTAL** | **90 min** | **34 min** | ** 2.6x faster** |
 | **Success rate** | **40%** | **85%** | **+112%** |
 
 ### Phase 0: Pre-Planning (5 min)
@@ -450,13 +450,13 @@ const createBatch = (batch_elements) => {
     actions.push(...createElement(el.name, el.x1, el.y1, el.x2, el.y2));
   });
   
-  // ✅ ОБЯЗАТЕЛЬНО: Verification после batch
+  //  ОБЯЗАТЕЛЬНО: Verification после batch
   actions.push(
     { action: "key", text: "alt+1" },
     { action: "wait", duration: 2 }
   );
   
-  console.log(`✅ Batch complete: ${batch_elements.length} elements`);
+  console.log(` Batch complete: ${batch_elements.length} elements`);
   return actions;
 };
 ```
@@ -471,7 +471,7 @@ const createConnectionsBatched = (connection_batches) => {
   const actions = [];
   
   connection_batches.forEach((batch, index) => {
-    console.log(`🔗 Batch ${index+1}: ${batch.connections.length} connections`);
+    console.log(` Batch ${index+1}: ${batch.connections.length} connections`);
     
     // Step 1: Navigate to viewport
     actions.push(
@@ -547,7 +547,7 @@ const chooseConnectionStrategy = (from, to) => {
 
 ---
 
-## <a name="python-generator"></a>🐍 PYTHON COORDINATE GENERATOR
+## <a name="python-generator"></a> PYTHON COORDINATE GENERATOR
 
 ```python
 """
@@ -579,14 +579,14 @@ class MiroCoordinateGenerator:
         print(f"📏 Canvas size: {width}x{height}px")
         
         if width > self.MAX_CANVAS_WIDTH:
-            print(f"❌ Width {width}px EXCEEDS {self.MAX_CANVAS_WIDTH}px")
+            print(f" Width {width}px EXCEEDS {self.MAX_CANVAS_WIDTH}px")
             return False
             
         if height > self.MAX_CANVAS_HEIGHT:
-            print(f"❌ Height {height}px EXCEEDS {self.MAX_CANVAS_HEIGHT}px")
+            print(f" Height {height}px EXCEEDS {self.MAX_CANVAS_HEIGHT}px")
             return False
             
-        print("✅ Validation PASSED")
+        print(" Validation PASSED")
         return True
         
     def create_layer(self, layer_name, y_position, elements, spacing=100):
@@ -613,19 +613,19 @@ class MiroCoordinateGenerator:
             for name, coords in self.elements.items():
                 f.write(f"  '{name}': {coords},\n")
             f.write("};\n")
-        print(f"✅ Exported to {filename}")
+        print(f" Exported to {filename}")
 
 # ИСПОЛЬЗОВАНИЕ:
 gen = MiroCoordinateGenerator()
 gen.create_layer("client", y=150, elements=["Users", "Browser"])
 gen.create_layer("web", y=250, elements=["Front end"])
-gen.validate_canvas_size()  # ✅ КРИТИЧНО
+gen.validate_canvas_size()  #  КРИТИЧНО
 gen.export_to_javascript()
 ```
 
 ---
 
-## <a name="troubleshooting-trees"></a>🔧 TROUBLESHOOTING DECISION TREES
+## <a name="troubleshooting-trees"></a> TROUBLESHOOTING DECISION TREES
 
 ### Tree 1: Элементы не видны
 
@@ -686,7 +686,7 @@ NO → VERIFY COORDINATES
 
 ---
 
-## <a name="templates"></a>📦 READY-TO-USE TEMPLATES
+## <a name="templates"></a> READY-TO-USE TEMPLATES
 
 ### Template 1: Complete Workflow
 
@@ -696,7 +696,7 @@ NO → VERIFY COORDINATES
  * Estimated time: 30-35 minutes
  */
 const createLargeDiagram = (diagram_spec) => {
-  console.log("🎯 Starting Large Diagram Creation");
+  console.log(" Starting Large Diagram Creation");
   const actions = [];
   
   // PHASE 0: Pre-Planning (5 min)
@@ -721,7 +721,7 @@ const createLargeDiagram = (diagram_spec) => {
     { action: "wait", duration: 2 }
   );
   
-  console.log("✅ Diagram complete!");
+  console.log(" Diagram complete!");
   return actions;
 };
 ```
@@ -784,7 +784,7 @@ const createConnection = (from_name, to_name) => {
 
 ---
 
-## <a name="benchmarks"></a>📊 PERFORMANCE BENCHMARKS
+## <a name="benchmarks"></a> PERFORMANCE BENCHMARKS
 
 ### Реальные метрики (27 элементов, 45 connections)
 
@@ -817,7 +817,7 @@ const createConnection = (from_name, to_name) => {
 
 ---
 
-## 🎓 КЛЮЧЕВЫЕ УРОКИ v5.0
+##  КЛЮЧЕВЫЕ УРОКИ v5.0
 
 1. **Coordinate validation экономит 15-30 минут** — ВСЕГДА делать pre-flight check
 2. **ELEMENT_REGISTRY обязателен** — read_page не дает координаты canvas
