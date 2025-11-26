@@ -198,7 +198,7 @@ const determineWorkflow = (element_count, connection_count) => {
 
 ---
 
-## <a name="canvas-limits"></a>📏 CANVAS SIZE LIMITS - Жёсткие ограничения
+## <a name="canvas-limits"></a>CANVAS SIZE LIMITS - Жёсткие ограничения
 
 ###  КРИТИЧЕСКОЕ ПРАВИЛО
 
@@ -248,7 +248,7 @@ const MARGINS = {
 
 ---
 
-## <a name="element-registry"></a>📝 ELEMENT_REGISTRY PATTERN - Обязательный tracking
+## <a name="element-registry"></a>ELEMENT_REGISTRY PATTERN - Обязательный tracking
 
 ###  КРИТИЧЕСКОЕ ОТКРЫТИЕ
 
